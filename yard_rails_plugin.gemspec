@@ -18,5 +18,6 @@ Gem::Specification.new do |gem|
   gem.version       = YARD::Rails::Plugin::VERSION
 
   gem.add_dependency 'yard', '> 0.7'
+  gem.add_development_dependency 'rake'
   gem.add_development_dependency 'rubocop'
 end
