@@ -18,18 +18,26 @@ You are more than invited to contribute!
 
 For now this gem is available only through github so add this line to your application's Gemfile:
 
-    gem 'yard_rails_plugin', :git => 'https://github.com/Antronin/yard_rails_plugin.git', :tag => 'v0.0.1'
+```bash
+    gem 'yard_rails_plugin'
+```
 
 Execute:
 
+```bash
     bundle
+```
 
-Then edit the file _.yardopts_ with
+Then edit the file ```.yardopts``` with
 
+```ruby
     "{lib,app}/**/*.rb" --plugin rails-plugin - tmp/routes.html
+```
 
 ## Usage
 
 Now you can execure yard doc with
 
-    bundle exec yard doc
+```bash
+    bundle exec yard
+```
