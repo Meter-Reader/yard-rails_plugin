@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module YARD
   module Rails
     module Plugin
@@ -7,6 +9,7 @@ module YARD
           return unless owner.is_a?(YARD::CodeObjects::MethodObject)
           return unless owner.parent.is_a?(YARD::CodeObjects::ClassObject)
           return unless owner.parent.name.to_s[/Controller/]
+
           (owner[:params] ||= []) << statement.source.match(/params\[((:|')\w+'?)\]/)[1]
         end
       end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'yard-rails-plugin/version'
 require 'yard-rails-plugin/routes'
 
@@ -5,13 +7,13 @@ require 'yard-rails-plugin/routes'
 require 'yard-rails-plugin/controller_params_handler'
 
 # Templates
-YARD::Templates::Engine.register_template_path File.dirname(__FILE__) + '/../templates'
+YARD::Templates::Engine.register_template_path "#{File.dirname(__FILE__)}/../templates"
 
 # After Source Parsing
 def load_rails_environment(env)
   puts "[rails-plugin] Loading Rails environment (#{env})..."
-  ENV["RAILS_ENV"] = env
-  require File.join(Dir.pwd,'config/environment')
+  ENV['RAILS_ENV'] = env
+  require File.join(Dir.pwd, 'config/environment')
 end
 
 YARD::Parser::SourceParser.after_parse_list do
