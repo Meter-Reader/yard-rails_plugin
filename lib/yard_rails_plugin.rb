@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require 'yard-rails-plugin/version'
-require 'yard-rails-plugin/routes'
+require 'yard_rails_plugin/version'
+require 'yard_rails_plugin/routes'
 
 # Handlers
-require 'yard-rails-plugin/controller_params_handler'
+require 'yard_rails_plugin/controller_params_handler'
 
 # Templates
 YARD::Templates::Engine.register_template_path "#{File.dirname(__FILE__)}/../templates"
