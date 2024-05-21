@@ -19,7 +19,7 @@ You are more than invited to contribute!
 For now this gem is available only through github so add this line to your application's Gemfile:
 
 ```bash
-    gem 'yard_rails_plugin'
+    gem 'yard-rails_plugin'
 ```
 
 Execute:
